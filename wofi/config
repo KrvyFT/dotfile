@@ -1,0 +1,11 @@
+style=/home/kira/.config/wofi/style.css
+show=drun
+always_parse_args=true
+show_all=true
+width=700
+height=500
+print_command=true
+layer=overlay
+insensitive=true
+sort=frecency
+prompt=
