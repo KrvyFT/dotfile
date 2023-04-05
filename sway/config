@@ -30,9 +30,9 @@ for_window [app_id="ncmpcpp"] floating enable, resize set height 500 px, resize 
 for_window [app_id="cava"] floating enable, resize set height 500 px, resize set width 1000px, move position 895 520
 for_window [app_id="veracrypt"] floating enable
 for_window [app_id=kitty] floating enable, resize set height 600 px, resize set width 1000 px
-for_window [app_id=thunar] floating enable, resize set height 600 px, resize set width 1000 px
 for_window [app_id=org.telegram.desktop] floating enable, resize set height 900 px, resize set width 1400 px
-
+for_window [app_id=Thunar] floating enable, resize set height 600 px, resize set width 1000 px
+for_window [app_id=thunar] floating enable, resize set height 600 px, resize set width 1000 px
 # Assignments
 
 assign [app_id="amfora"] 2
