@@ -2,7 +2,8 @@
 	"position": "top",
 	"height": 30,
 	"modules-left": [
-		"sway/workspaces"
+		"sway/workspaces",
+		"mpd"
 	],
 	"modules-right": [
 		"network",
@@ -12,7 +13,6 @@
 		"clock",
 		"custom/power"
 	],
-	// Modules configuration
 	"sway/workspaces": {
 		"disable-scroll": true,
 		"all-outputs": true,
@@ -45,7 +45,7 @@
 	"custom/date": {
 		"format": "󰸗 {}",
 		"interval": 3600,
-		"exec": "/home/loki/bin/waybar-date.sh"
+		"exec": "/home/kira/.config/waybar/waybar-date.sh"
 	},
 	"clock": {
 		"format": "󰅐 {:%H:%M}",
@@ -90,6 +90,15 @@
 				"",
 				""
 			]
+		}
+	},
+	"mpd": {
+		"format": "{stateIcon} {artist} - {title}",
+		"on-click": "mpc toggle",
+		"format-disconnected": "Disconnected ",
+		"state-icons": {
+			"playing": "",
+			"paused": ""
 		}
 	}
 }
