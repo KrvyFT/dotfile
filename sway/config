@@ -4,6 +4,7 @@
 exec mako
 exec --no-startup-id fcitx5 -d
 exec redshift -l 35.1236:135.9242
+exec mpd
 
 # Style
 
@@ -33,6 +34,7 @@ for_window [app_id=kitty] floating enable, resize set height 600 px, resize set 
 for_window [app_id=org.telegram.desktop] floating enable, resize set height 900 px, resize set width 1400 px
 for_window [app_id=Thunar] floating enable, resize set height 600 px, resize set width 1000 px
 for_window [app_id=thunar] floating enable, resize set height 600 px, resize set width 1000 px
+for_window [app_id=org.pwmt.zathura] floating enable, resize set height 1200 px, resize set width 1000 px
 # Assignments
 
 assign [app_id="amfora"] 2
@@ -40,7 +42,6 @@ assign [app_id="neomutt"] 4
 assign [app_id="weechat"] 4
 assign [app_id="telegramdesktop"] 4
 assign [class="Signal Beta"] 4
-assign [app_id="org.pwmt.zathura"] 5
 assign [class="Gimp-2.10"] 6
 assign [app_id="audacity"] 6
 
@@ -81,8 +82,8 @@ set $menu wofi --hide-scroll | xargs swaymsg exec --
 
 # Default wallpaperr
 
-output * bg /home/kira/Pictures/wallpapers/wallpaper.png fill
-output eDP-1 scale 1.25
+output * bg /home/kira/Pictures/wallpapers/wallpaper_skadi.png fill
+output eDP-1 scale 1.20
 
 # Behavior
 
@@ -94,8 +95,8 @@ focus_follows_mouse yes
 
 exec swayidle -w \
           timeout 300 'swaylock -f' \
-          timeout 600 'swaymsg "output *dpms off"' resume 'swaymsg "output* dpms on"' \
-          before-sleep 'swaylock -f'
+          timeout 600 'swaymsg "output * dpms off"' \
+          resume 'swaymsg "output * dpms on"'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 
