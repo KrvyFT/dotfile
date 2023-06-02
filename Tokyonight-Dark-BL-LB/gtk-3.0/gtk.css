@@ -1,6 +1,11 @@
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
+/* Modification by imaginary-stack on 2023-06-01 */
+/* Changes made: Removed styles for .text-button */
+/* Original CSS from Fausto-Korpsvart */
+/* License: GPL 3.0 */
+/* ... */
 
 /* widget text/foreground color */
 @define-color theme_fg_color #c0caf5;
