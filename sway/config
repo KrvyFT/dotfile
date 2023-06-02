@@ -8,7 +8,7 @@ exec mpd
 
 # Style
 
-font pango:mononoki Nerd Font 12px
+font pango:mononoki Nerd Font 14px
 default_border pixel 2
 
 # titlebar_border_thickness 2
