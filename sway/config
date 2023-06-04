@@ -1,6 +1,7 @@
 # Autostart
 
 # exec udiskie
+
 exec mako
 exec --no-startup-id fcitx5 -d
 exec redshift -l 35.1236:135.9242
@@ -22,7 +23,7 @@ gaps inner 2
 
 client.focused          #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
 client.focused_inactive #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
-client.unfocused        #414868 #24283b #a9b1d6 #7dcfff   #414868
+client.unfocused        #414868 #1a1b26 #a9b1d6 #7dcfff   #414868
 client.urgent           #e0af68 #e0af68 #1d202f #7dcfff   #e0af68
 
 # Window rules
@@ -35,6 +36,7 @@ for_window [app_id=org.telegram.desktop] floating enable, resize set height 900 
 for_window [app_id=Thunar] floating enable, resize set height 600 px, resize set width 1000 px
 for_window [app_id=thunar] floating enable, resize set height 600 px, resize set width 1000 px
 for_window [app_id=org.pwmt.zathura] floating enable, resize set height 1200 px, resize set width 1000 px
+
 # Assignments
 
 assign [app_id="amfora"] 2
@@ -95,8 +97,8 @@ focus_follows_mouse yes
 
 exec swayidle -w \
           timeout 300 'swaylock -f' \
-          timeout 600 'swaymsg "output * dpms off"' \
-          resume 'swaymsg "output * dpms on"'
+          timeout 600 'swaymsg "output *dpms off"' \
+resume 'swaymsg "output* dpms on"'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 
@@ -206,15 +208,12 @@ bindsym $mod+Tab workspace back_and_forth
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
     bindsym $mod+b splith
-    bindsym $mod+v splitv
-
+    bindsym $mod+v splitv   
     # Switch the current container between different layout styles
     # bindsym $mod+m layout tabbed
-    bindsym $mod+t layout toggle split
-
+    bindsym $mod+t layout toggle split  
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
-
+    bindsym $mod+f fullscreen   
     # Toggle floating 
     bindsym $mod+s floating toggle
     # Toggle between floating and other layout
@@ -224,11 +223,9 @@ bindsym $mod+Tab workspace back_and_forth
     bindsym $mod+Shift+Up move up 10
     bindsym $mod+Left move left 1
     bindsym $mod+Right move right 1
-    bindsym $mod+Down move down 1
-
+    bindsym $mod+Down move down 1   
     # Move focus to the parent container
-    bindsym $mod+a focus parent
-
+    bindsym $mod+a focus parent 
     # Move focus to the child container
     bindsym $mod+Shift+a focus child
 
@@ -273,10 +270,10 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86Search exec $menu
 bindsym --locked XF86AudioPlay exec playerctl play-pause
 
-
 bindsym $mod+p exec playerctl play-pause
 bindsym $mod+n exec playerctl next
 bindsym $mod+r exec playerctl previous
+xwayland disabled
 # Status Bar
 
 # Read `man 5 sway-bar` for more information about this section
