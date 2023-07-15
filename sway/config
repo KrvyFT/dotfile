@@ -9,7 +9,7 @@ exec mpd
 
 # Style
 
-font pango:mononoki Nerd Font 14px
+font pango:Agave Nerd Font Mono 16
 default_border pixel 2
 
 # titlebar_border_thickness 2
@@ -28,13 +28,11 @@ client.urgent           #e0af68 #e0af68 #1d202f #7dcfff   #e0af68
 
 # Window rules
 
+for_window [workspace="8"] layout tabbed
 for_window [app_id="ncmpcpp"] floating enable, resize set height 500 px, resize set width 1000 px, move position 5 10
 for_window [app_id="cava"] floating enable, resize set height 500 px, resize set width 1000px, move position 895 520
 for_window [app_id="veracrypt"] floating enable
-for_window [app_id=kitty] floating enable, resize set height 600 px, resize set width 1000 px
-for_window [app_id=org.telegram.desktop] floating enable, resize set height 900 px, resize set width 1400 px
-for_window [app_id=Thunar] floating enable, resize set height 600 px, resize set width 1000 px
-for_window [app_id=thunar] floating enable, resize set height 600 px, resize set width 1000 px
+for_window [app_id=kitty] floating enable, resize set height 720 px, resize set width 1200 px
 for_window [app_id=org.pwmt.zathura] floating enable, resize set height 1200 px, resize set width 1000 px
 
 # Assignments
@@ -85,7 +83,7 @@ set $menu wofi --hide-scroll | xargs swaymsg exec --
 # Default wallpaperr
 
 output * bg /home/kira/Pictures/wallpapers/wallpaper_skadi.png fill
-output eDP-1 scale 1.20
+output eDP-1 scale 1
 
 # Behavior
 
@@ -97,8 +95,8 @@ focus_follows_mouse yes
 
 exec swayidle -w \
           timeout 300 'swaylock -f' \
-          timeout 600 'swaymsg "output *power off"' \
-resume 'swaymsg "output* power on"'
+          timeout 600 'swaymsg "output * power off"' \
+resume 'swaymsg "output * power on"'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 
@@ -273,7 +271,8 @@ bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym $mod+p exec playerctl play-pause
 bindsym $mod+n exec playerctl next
 bindsym $mod+r exec playerctl previous
-xwayland disabled
+
+# xwayland disabled
 
 # Status Bar
 
