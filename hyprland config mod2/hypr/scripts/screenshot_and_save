@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# 设置保存截图的文件路径
+output_file=/home/krvy/Pictures/screenshots/$(date +%Y%m%d_%H%M%S).png
+
+# 使用 grim 截屏并保存为 PNG 文件
+grim -g "$(slurp)" "$output_file"
+
+# 将文件内容复制到剪贴板
+cat "$output_file" | wl-copy
+
+# 使用 kitty 的 icat 命令显示截图
+kitty +kitten icat "$output_file"
+
+# 显示通知
+notify-send "Screenshot saved as $output_file and copied to clipboard" -a "ss"

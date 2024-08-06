@@ -1,1 +1,1 @@
-{"class": "playing", "text": "\u30e8\u30eb\u30b7\u30ab - \u5fc3\u306b\u7a74\u304c\u7a7a\u3044\u305f - \u5fc3\u306b\u7a74\u304c\u7a7a\u3044\u305f (03:14/04:23) ", "tooltip": "\u5fc3\u306b\u7a74\u304c\u7a7a\u3044\u305f\nby \u30e8\u30eb\u30b7\u30ab\nfrom \u5fc3\u306b\u7a74\u304c\u7a7a\u3044\u305f\n(spotify)"}
+"{\"class\": \"none\", \"text\": \"\"}"
